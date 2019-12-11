@@ -53,3 +53,32 @@ In the example below, we are setting the URL destination to The Labrador Club we
   >Join The Labrador Retriever Club</a>
 ```
 
+## Metadata
+The `<head>` element contains the metadata for a web page.
+Metadata is information about the page that isn’t displayed directly on the web page. Unlike the information inside of the `<body>` tag, the metadata in the head is information about the page itself.
+
+### Title
+A browser’s tab displays the title specified in the `<title>` tag. The `<title>` tag is always inside of the `<head>`.
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Coding Journal</title>
+  </head>
+</html>
+```
+
+## Hierarchy
+HTML is organized as a collection of family tree relationships. Understanding HTML hierarchy is important because child elements can inherit behavior and styling from their parent element.
+
+## Semantic Elements
+Structure elements allow you to organize the main parts of your page. They usually contain other HTML elements.
+
+Here’s what a typical webpage could include:
+* `<header>` as the first element of the page, that can include the logo and the tagline.
+* `<nav>` as a list of links that go to the different pages of the website.
+* `<h1>` as the title of the page.
+* `<article>` as the main content of the page, like a blog post.
+* `<footer>` as the last element of the page, located at the bottom.
+
+![alt text](./resources/images/html-sectioning-elements.png "Positioning of Semantic HTML Elements")
