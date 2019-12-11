@@ -1,7 +1,7 @@
 # HTML
 
 ## HTML Elements Reference
-For more information on HTML elements, see [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+For more information on HTML elements, see [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
 ## Accessibility with Headers
 For people who are blind or visually impaired, screen reading software is used to parse through text on a web page. A common technique these folks will use to navigate the page is to jump from heading to heading to determine the overall content of the page more easily. That's why it's best practice to not skip one or more heading levels. If you did skip headings and went from <h1> to <h3>, you may cause confusion since the user has to deal with a missing heading. Don't bum out any of your users - structure your headings properly!
