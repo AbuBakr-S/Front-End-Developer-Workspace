@@ -57,6 +57,8 @@ In the example below, we are setting the URL destination to The Labrador Club we
 The `<head>` element contains the metadata for a web page.
 Metadata is information about the page that isn’t displayed directly on the web page. Unlike the information inside of the `<body>` tag, the metadata in the head is information about the page itself.
 
+Learn more about the `<meta>` element [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)
+
 ### Title
 A browser’s tab displays the title specified in the `<title>` tag. The `<title>` tag is always inside of the `<head>`.
 ```
