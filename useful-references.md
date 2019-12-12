@@ -152,3 +152,12 @@ If the CSS file is stored in the same directory as your HTML file, then you can 
 `<link href="./style.css" type="text/css" rel="stylesheet" />`
 
 Using a relative path is very common way of linking a stylesheet.
+
+## Specificity
+
+In order of precedence:
+1. `!important`
+2. Id Selectors (`#unique`)
+3. Class Selectors (`.warning`) 
+4. Type Selectors (`h1`) and Pseudo-Elements (`::before`)
+
