@@ -161,3 +161,8 @@ In order of precedence:
 3. Class Selectors (`.warning`) 
 4. Type Selectors (`h1`) and Pseudo-Elements (`::before`)
 
+![alt text](./resources/images/css-specificity1.png "Specificity Order")
+![alt text](./resources/images/css-specificity2.png "Specificity Levels")
+![alt text](./resources/images/css-specificity3.png "Specificity Explanation")
+
+
