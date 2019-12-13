@@ -319,3 +319,8 @@ To justify content on the *main axis* use `justify-content`, which has the possi
 * `space-between`
 * `space-evenly`
 
+## Grid VS Flexbox
+Flexbox is for how content flows, Grid is for how content is placed - i.e. grid works nicely for page layouts, flex works nicely for regions within the grid.
+
+
+
