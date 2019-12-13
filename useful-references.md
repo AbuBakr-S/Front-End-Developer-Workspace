@@ -168,3 +168,100 @@ In order of precedence:
 ![alt text](./resources/images/css-specificity3.png "Specificity Explanation")
 
 
+## The Box Model
+Every element in web design is a rectangular box.
+According to the box model concept, every element on a page is a rectangular box and may have width, height, padding, borders, and margins.
+
+*Padding*
+Padding - The space between the box’s content and its border. Note that padding is in addition to the content’s height and width, and is considered to be inside the element itself.
+
+*Border*
+Border - A line drawn around the content and padding of an element. 
+1. Define the stroke width of the border
+2. Define its style
+3. Define its color
+
+When you’re not sure how a box is being rendered, add a border: 1px solid red; declaration to it. This will clearly show the box’s padding, margin, and overall dimensions with just a single line of CSS.
+
+Want see every single "box" that makes up a page? Try putting this in the stylesheet temporarily:
+```
+* {
+  border: 1px solid red !important;
+}
+```
+
+*Margin*
+It is the space between the box and surrounding boxes.
+
+### Box Model Components
+![alt text](./resources/images/css-margin.png "Box Model Elements");
+
+
+## CSS Display Property
+* `display: inline` - No width and height because it just occupies the space it takes up with its text content.
+* `display: inline-block` - Similar to inline, except you can add width and height. 
+* `display: block` -  Takes up its entire line no matter what.
+* `display: none` - Nothing is displayed. Takes up no width and height from the DOM - It doesn't disrupt the flow of other elements.
+
+### Display and Positioning: Inline & Block
+The biggest distinction between outside display options is whether elements occupy the entire horizontal line they are on (remember that elements are organized hierarchically on the DOM) or if they only occupy the width they need and then the following element can be placed next to them on the same horizontal line.
+
+Elements set to inline display have no width or height and only occupy the space that their text property (or .innerHTML property) takes up. So in our box class example above, the rectangles would display on the same line but only occupy as much space as their text needs to display.
+
+## Display and Positioning: Z-index
+Overlapping elements with a larger z-index cover those with a smaller one.
+Without explicitly using z-index the last element written to the DOM (the last element you wrote in your code) will appear on top of all the others, and so on up the chain of your elements.
+
+## Absolute vs Relative Units
+Many CSS properties require a unit of measurement. There’s a lot of units available, but the most common ones you’ll encounter are px (pixel) and em (pronounced like the letter m). The former is what you would intuitively call a pixel, regardless of whether the user has a retina display or not, and the latter is the *current font size of the element* in question.
+
+There are broadly two types of units of measurement for CSS properties, absolute and relative.
+
+### Absolute - Static
+* px
+* in
+* mm
+* cm
+
+Absolute measurements are set values regardless of anything having to do with your program or the browser. A font size set to 16px will appear the same size no matter how big the screen. 
+
+### Relative - Dynamic
+* % - percentage of something, such as screen width
+* em - A unit equivalent to the current font size - if 12px font, 2em would be 24px
+* vw - units of viewport width (essentially the browser’s rendering space). Each unit is 1/100th of width
+* vh - the same as above but for viewport height
+
+The em unit is very useful for *defining sizes relative to some base font*. For example, if you set the font-size of body to 16px, you could then set other element’s font-size value relative to that 16px. Here’s what that could look like:
+```
+body {
+ font-size: 16px;
+}
+
+#one {
+  font-size: 1.5em
+}
+
+#two {
+  font-size: 0.5em
+}
+```
+
+## Fonts
+
+### Font Family
+font-family is another built-in CSS property that defines the typeface for whatever element you selected. It accepts multiple values because not all users will have the same fonts installed.
+
+When using fonts on the web, you must first consider what fonts are available to your users. Every operating system, be it Windows, OS X, or Linux, comes with a set of pre-installed fonts that you can use for customizing your website. For a complete list of "web-safe" fonts, follow [this](https://web.mit.edu/jmorzins/www/fonts.html) link.
+
+1. When using the font-family property, you specify the font(s) you want to use in your HTML.
+2. The browser, starting from left to right, looks at the font(s) you've specified and checks to see if it can render the text using the font(s) you've provided. 
+3. If it can't use the first font, then the browser moves to the next font, and so-on.
+
+The purpose for specifying multiple fonts is because not all fonts are available on every operating system. So, specifying multiple, similar fonts ensures users have a consistent experience regardless of the operating system they are using.
+
+### Font Weight & Style
+In CSS, font weights are expressed as numeric values between 100 and 900. Fortunately, there are relatively standardized, human-friendly terms for each of these numeric values. “Black” usually means 900, “bold” is 700, “regular” is 400, etc. Most families don’t supply a face for every single weight. For example, Roboto is missing “extra light” (200), “semi bold” (600), and “extra bold” (800).
+
+### Additional Resources:
+Check out [CSS Tricks](https://css-tricks.com/)
+
