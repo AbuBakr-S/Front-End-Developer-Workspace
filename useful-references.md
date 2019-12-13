@@ -263,5 +263,59 @@ The purpose for specifying multiple fonts is because not all fonts are available
 In CSS, font weights are expressed as numeric values between 100 and 900. Fortunately, there are relatively standardized, human-friendly terms for each of these numeric values. “Black” usually means 900, “bold” is 700, “regular” is 400, etc. Most families don’t supply a face for every single weight. For example, Roboto is missing “extra light” (200), “semi bold” (600), and “extra bold” (800).
 
 ### Additional Resources:
-Check out [CSS Tricks](https://css-tricks.com/)
+Check out [CSS Tricks](https://css-tricks.com/).
+
+## Flexbox
+Specializes in alligning and distributing elements within a parent element.
+
+* Flex Container - Can expand to fit the items available inside of it. Uses a main container with items nested inside of it where some of the CSS properties are used only for the parent and others on the items.
+* `Flex Container` - Parent | `Flex Items` - Elements inside.
+* To use flexbox set the `display` property of a `div` to `flex`. The items inside that element will automatically become flex items, and you can then use the flexbox syntax in your CSS code.
+
+By setting an element's display property to flex, all elements inside of it become flex items that can be laid out in a customized way following design patterns like columns, rows, alignment, and distribution.
+
+More info [here](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) on Flexbox.
+
+### Axes and Direction with Flexbox
+The Flexbox model relies on two axes: the *main axis* and the *cross axis*. *The main axis is defined by flex-direction*, which has four possible values:
+* `row`
+* `row-reverse`
+* `column`
+* `column-reverse`
+
+*The two row settings will create the main axis horizontally* - or `inline` direction. *The two column settings will create the main axis vertically* - or `block` direction.
+
+The axis determines the flow of your content - you can think of this as being either rows or columns - and they will be determined when you start aligning and justifying content within a flex container.
+
+Read more about the [Basic Concepts of Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#The_two_axes_of_flexbox).
+
+### Main Axis - flex-direction: row:
+![alt text](./resources/images/css-flexDirection/mainAxis-row.png "Main Axis - Row")
+### Main Axis - flex-direction: column:
+![alt text](./resources/images/css-flexDirection/mainAxis-column.png "Main Axis - Col")
+### Cross Axis - flex-direction: row:
+![alt text](./resources/images/css-flexDirection/crossAxis-row.png "Cross Axis - Row")
+### Cross Axis - flex-direction: column:
+![alt text](./resources/images/css-flexDirection/crossAxis-column.png "Cross Axis - Col")
+
+### Ordering Elements with Flexbox
+There are three ways to explicitly set the order in which items will appear in a grid:
+1. Moving the HTML code for the elements themselves to reorder
+2. Appending -reverse to row or column will reverse the order in the specified row or column
+3. Using the order property of the individual items inside the grid
+
+### Alligning Items and Justifying Content with Flexbox
+To align items on the *cross axis* use `align-items` with the possible values:
+* `stretch`
+* `flex-start`
+* `flex-end`
+* `center`
+
+To justify content on the *main axis* use `justify-content`, which has the possible values:
+* `flex-start`
+* `flex-end`
+* `center`
+* `space-around`
+* `space-between`
+* `space-evenly`
 
