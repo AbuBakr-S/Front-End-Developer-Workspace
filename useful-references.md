@@ -319,8 +319,33 @@ To justify content on the *main axis* use `justify-content`, which has the possi
 * `space-between`
 * `space-evenly`
 
+## Flexbox Fundamentals
+The Flexbox Layout model emphasizes presenting a more methodological way to lay out, align and allocate space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”).
+
+“The main idea behind the flex layout is to give the container the ability to alter its items’ width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes).”
+
+![alt text](./resources/images/flexbox-fundamentals.png "Flexbox Concept Illustration")
+
+* A flex container expands its items to fill available free space or shrinks them to prevent overflow. 
+* It provides a better arrangement of all of the page elements. 
+* It is a one-dimensional layout model that offers space allocation between items in an interface and robust alignment capabilities.
+
+## Grid Fundamentals
+CSS Grid Layout is a CSS layout method developed for the two-dimensional layout of items on a webpage or an application, meaning it can manage both columns and rows.
+
+CSS Grid outshines at dividing a page into several sections or defining the correlation in terms of size, position, and layer.
+
+![alt text](./resources/images/grid-fundamentals.png "Grid Concept Illustration")
+
 ## Grid VS Flexbox
-Flexbox is for how content flows, Grid is for how content is placed - i.e. grid works nicely for page layouts, flex works nicely for regions within the grid.
+At the highest level *CSS Grid excels at creating layouts for a webpage*, while *Flexbox is a master of content flow for each element* that makes up the page layout.
 
+### Overview
+* CSS Grid Layout is a two-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a one-dimensional system (either in a column or a row).
+* CSS Grid’s approach is layout-first while Flexbox’ approach is content-first.
+* If you are well aware of your content before making layout, then blindly opt for Flexbox and if not, opt for CSS Grid.
+* Flexbox layout is most appropriate to the components of an application (as most of them are fundamentally linear), and small-scale layouts, while the Grid layout is intended for larger scale layouts which aren’t linear in their design.
+* If you only need to define a layout as a row or a column, then you probably need flexbox. If you want to define a grid and fit content into it in two dimensions — you need the grid.
 
-
+![alt text](./resouces/images/content-vs-layout.png "Content First vs Layout First")
+![alt text](./resouces/images/grid-and-flexbox.jpeg "Using flexbox inside a grid")
