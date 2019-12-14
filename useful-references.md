@@ -352,3 +352,24 @@ At the highest level *CSS Grid excels at creating layouts for a webpage*, while 
 ![alt text](./resouces/images/content-vs-layout.png "Content First vs Layout First")
 ![alt text](./resouces/images/grid-and-flexbox.jpeg "Using flexbox inside a grid")
 
+## Grid Rows and Coulmns
+To use CSS Grid set the `display` property of the container element to `grid`.
+
+After setting the display property of your container div to grid, the next step is to set the rows and columns in your grid which can be done with the CSS properties:
+* `grid-template-columns`
+* `grid-template-rows`
+* To define gutters between rows and columns you can use the property `grid-gap` on the parent container that has the display property set to grid.
+
+## Rows & Columns in Action
+`grid-template-columns` is the property that defines the column layout of your grid - that is how many sections the page should be divided into vertically. The values for this property are the explicit value for each column and the number of columns is defined implicitly by the number of values entered. For example:
+
+`grid-template-columns: 60px 60px;`
+would create two columns of 60px each. If you had two items inside your grid and didn't set their position explicitly, the first item would be placed in the first column and the second item in the second. grid-template-rows follows the same logic, so that:
+`grid-template-columns: 60px 60px;`
+`grid-template-rows: 160px 60px;`
+would create a grid with two columns and two rows.
+
+A CSS Grid is made up of rows and columns which are defined using the CSS properties `grid-template-columns` and `grid-template-rows`, which take as values the size of each track.
+
+See [grid visualizer and generator](https://cssgrid-generator.netlify.com/).
+
