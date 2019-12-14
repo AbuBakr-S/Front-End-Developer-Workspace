@@ -340,6 +340,8 @@ CSS Grid outshines at dividing a page into several sections or defining the corr
 ## Grid VS Flexbox
 At the highest level *CSS Grid excels at creating layouts for a webpage*, while *Flexbox is a master of content flow for each element* that makes up the page layout.
 
+![alt text](./resources/images/grid-vs-flexbox-visualisation.png "Spacial View of CSS Grid VS Flexbox")
+
 ### Overview
 * CSS Grid Layout is a two-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a one-dimensional system (either in a column or a row).
 * CSS Grid’s approach is layout-first while Flexbox’ approach is content-first.
@@ -349,3 +351,4 @@ At the highest level *CSS Grid excels at creating layouts for a webpage*, while 
 
 ![alt text](./resouces/images/content-vs-layout.png "Content First vs Layout First")
 ![alt text](./resouces/images/grid-and-flexbox.jpeg "Using flexbox inside a grid")
+
