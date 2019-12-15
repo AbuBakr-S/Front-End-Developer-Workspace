@@ -424,8 +424,54 @@ The grid-auto-rows property can be used to generate the number of rows based on 
 Would create rows that are at least 100px tall and can be as tall as the content inside them demands.
 
 
-
-
-
+### Tip
 The following will adjust for tall letters for example and is ideal for `X` amount of Rows of Content. 
 *Note* `grid-auto-rows: minmax(100px, auto);`
+
+
+## Grid - A Simple Blog Page
+*Note* When adding an image to a grid commponent, consider using `background-image: (url)` and `background-size: contain` instead as this will respect the set size of the element.
+
+### Key Terms
+`breakpoints` - the viewport width at which we want our design to change.
+`viewport` - the area of the window in which web content can be seen. We use the dimensions of the viewport (usually the width, but sometimes the height) as the basis of our media queries.
+
+## Adding Media Queries in Code
+Media queries are used to set different style rules for different devices or sized screens. We use breakpoints to set the condition of a media query. The logic is: `@media(feature:value)`
+
+Here is an example of how that could look in action:
+```
+@media(min-width:900px) {
+  body{
+   background:red;
+ }
+}
+```
+In the above example, if the viewport width is greater than 900px the background of the webpage would turn red.
+
+## Multiple Breakpoints
+We have seen how to set a breakpoint and use Media Queries to create different layouts for smaller screens and larger screens, but there are some development moments that will call for 3 possible layouts.
+
+Here is an example of what that code could look like:
+```
+/* Anything smaller than first breakpoint 600px */
+.container {
+  // rules for small screen
+}
+
+/* Medium Screens */
+@media (min-width: 600px) and (max-width:900px) {
+  .container {
+    // rules for medium-sized screen
+  }
+}
+
+/* Large Screens */
+@media (min-width:901px) {
+  .container {
+    // rules for large screen
+  }
+}
+```
+In this example, the medium screens media query is new, and we use the keyword and to build a complex media query that evaluates both a min and max to create a range for the CSS rules to apply, in this case if the width of the viewport is between 600px-900px.
+
