@@ -373,3 +373,59 @@ A CSS Grid is made up of rows and columns which are defined using the CSS proper
 
 See [grid visualizer and generator](https://cssgrid-generator.netlify.com/).
 
+
+## Grid Areas
+The grid-area property defines the space an element takes up in the grid by setting values for the row it starts and ends in, and the column it starts and ends in. In practice it could look like this:
+```
+  #one { 
+    /* row start/column start/ row end/ column end */
+    grid-area: 1/2/3/3;
+  }
+```
+In this example the element with the id, one would start at the first row and the first column, and end at the third row (which is the end of the second row if there is no third row) and the third column.
+
+Because `grid-area` is shorthand for the properties: `grid-row-start`, `grid-column-start`, `grid-row-end` and `grid-column-end`, the code above places the item from rows 1-3, and columns 2-3.
+
+Grid Areas Summary
+grid-template-areas is the property used to name the rows and columns of a grid and to set its layout. It could look like this:
+```
+  .container {
+      display:grid;
+      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 250px 600px;
+      grid-template-areas: 
+      "hd hd hd hd hd hd hd hd"
+      "sd sd sd main main main main main"
+      "ft ft ft ft ft ft ft ft";
+  }
+```
+The named areas in the grid are then assigned to each element according to where you want them to be displayed in the grid:
+```
+.header {
+  grid-area: hd;
+}
+```
+## Advanced Grid
+In the example above the element with the class header will stretch across the entire first row of columns because we have assigned it the grid-area hd, and we have defined the area hd with the value for grid-template-areas in the parent element.
+
+Advanced Grid Recap
+The fr unit represents a fraction of the available space in the grid container.
+*Note* `grid-template-rows: 350px 350px 1fr` = `container-height` - `grid-gap`
+
+The repeat() notation can be used to quickly layout many tracks for large grids. For example:
+
+`grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;`
+Could be written with repeat notation like this:
+
+`grid-template-columns: repeat(7, 1fr);`
+The grid-auto-rows property can be used to generate the number of rows based on the content and available space. The following code:
+
+`grid-auto-rows: minmax(100px, auto);`
+Would create rows that are at least 100px tall and can be as tall as the content inside them demands.
+
+
+
+
+
+The following will adjust for tall letters for example and is ideal for `X` amount of Rows of Content. 
+*Note* `grid-auto-rows: minmax(100px, auto);`
