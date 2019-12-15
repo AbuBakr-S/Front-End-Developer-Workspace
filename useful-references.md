@@ -475,3 +475,4 @@ Here is an example of what that code could look like:
 ```
 In this example, the medium screens media query is new, and we use the keyword and to build a complex media query that evaluates both a min and max to create a range for the CSS rules to apply, in this case if the width of the viewport is between 600px-900px.
 
+Complex media queries can be built using the keyword and to bound CSS rules between a range using min-width and max-width.
